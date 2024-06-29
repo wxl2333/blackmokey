@@ -18,6 +18,7 @@ body {
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
+    
 }
 
 .section1 {
@@ -47,6 +48,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	opacity: 0;
 	transition: opacity 1s;
+  
 	
 }
  .tooltip:hover .tooltiptext {
@@ -68,6 +70,8 @@ body {
 	text-align:center;
 	padding:4px;
 	text-decoration:none;
+    background-image: url('./img/10010.png'); 
+    background-size: cover;
 }
 a:hover,a:active
 {
