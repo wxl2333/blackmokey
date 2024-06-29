@@ -1,81 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Background Video with Image</title>
-<style>
-    body, html {
-        height: 100%;
-        width: auto;
-        margin: 0;
-        overflow: hidden;
-        position: relative; /* Ensure relative positioning for children */
-        z-index: 1;
-    }
-    .fullscreen-bg {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: -1;
-    }
-    .fullscreen-bg video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
-        width: 100%;
-        height: auto;
-        z-index: -1;
-    }
-    .custom-image {
-        display: none;
-        position: relative;
-        left: 55%;
-        top: 10%;
-        z-index: 10; 
-        opacity: 0; /* Initially set opacity to 0 */
-        transition: opacity 2s ease; /* Smooth transition for opacity change */
-    }
-    img{
-        width: 700px;
-        height: 700px;
-    }
-</style>
-</head>
-<body>
-<div class="fullscreen-bg">
-    <video id="bgVideo" autoplay muted>
-        <source src="./video/start.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="custom-image"id="o=img">
-        <a href="index2.html">
-        <img src="./img/10001.png">
-        </a>
-    </div>
-</div>
-
-<script>
-    var video = document.getElementById("bgVideo");
-    var imageContainer = document.querySelector(".custom-image");
-
-    video.addEventListener('ended', function() {
-        // 当前视频播放完毕时，切换到新的视频源
-        video.src = "https://www.heishenhua.com/video/b1/video_WebTitle_batch.mp4";
-        video.loop = true; // 设置新视频循环播放
-        video.play(); // 播放新视频
-        imageContainer.style.display = "block";
-        setTimeout(function() {
-            imageContainer.style.opacity = 1;
-        }, 100); // Delay added for smoother transition
-    });
-</script>
-
-</body>
-</html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>黑神话：悟空</title>
+		<link rel=icon href="./img/favicon.ico">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+	    <div class="section section1" >
+			<a class="tooltip" href="/css/" target="_self" style="top:70%; left:43%; width: 15%; height: 6%;">背景介绍
+	        <span class="tooltiptext">从第一支预告片到作品即将发售，<br>他们走过了怎样的九九八十一难</span></a>
+	    </div>
+	    <div class="section section2" >
+			<a class="tooltip" href="/css/" target="_self" style="top:70%; left:43%; width: 15%; height: 6%;">文化考据
+			<span class="tooltiptext">当传统美学遇上游戏，<br>他们是如何塑造出全新的艺术形态</span></a>
+	    </div>
+	    <div class="section section3" >
+			<<a class="tooltip" href="/css/" target="_self" style="top:70%; left:43%; width: 15%; height: 6%;">重走西游
+	        <span class="tooltiptext">当你化身天命人，<br>又会做出怎样的选择</span></a>
+	    </div>
+		
+	    <script src="scripts.js"></script>
+	</body>
+	</html>
