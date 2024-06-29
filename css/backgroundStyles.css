@@ -1,0 +1,158 @@
+/* 整体布局 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+   background-color: #000000;
+}
+/* 第一部分内容 */
+.contentSection1{
+  margin: 0px 120px 0px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* 第二部分内容 */
+.contentSection2{
+  margin: 0px 120px 0px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.image {
+flex: 1;
+text-align: center;
+}
+
+.image img {
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto; /* 居中显示图片 */
+}
+
+.text {
+flex: 1;
+padding: 0 20px; /* 右侧文字与图片对齐时的间距 */
+color: #fff;
+font-family: "楷体";
+}
+
+.text p {
+text-align: justify;
+line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+.content {
+    flex-direction: column;
+}
+.text {
+    padding: 20px 0;
+    text-align: center;
+}
+}
+
+
+
+/* 页面内容部分 */
+.content {
+  height: 200vh; /* 两部分内容高度的总和 */
+  overflow-y: hidden; /* 隐藏垂直滚动条 */
+  scroll-behavior: smooth; /* 平滑滚动 */
+}
+/* 按钮样式 */
+.sidebar {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* 按钮栏在最上层 */
+}
+.sidebar button:nth-child(1) {
+width: 40px;
+height: 40px;
+margin-bottom: 50px;
+background-image: url('./img/up.png'); /* 第一个按钮的背景图片路径 */
+background-size: cover;
+background-repeat: no-repeat;
+border: none;
+outline: none;
+cursor: pointer;
+background-color: transparent; 
+
+
+}
+
+.sidebar button:nth-child(2) {
+width: 40px;
+height: 40px;
+margin-top: 50px;
+
+background-image: url('./img/down.png'); /* 第二个按钮的背景图片路径 */
+background-size: cover;
+background-repeat: no-repeat;
+border: none;
+outline: none;
+cursor: pointer;
+background-color: transparent; 
+
+
+}
+/* 第一部分背景图 */
+.section1 {
+    height: 100vh;
+    background-image: url('./img/10003.png'); /* 第一部分背景图片路径 */
+    background-size: cover;
+    background-position: center;
+}
+/* 第二部分背景图 */
+.section2 {
+    height: 100vh;
+    background-image: url('./img/10004.png'); /* 第二部分背景图片路径 */
+    background-size: cover;
+    background-position: center;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+header {
+position: fixed;
+top:0%;
+left: 0%;
+right: 0%;
+height: 80px;
+z-index: 1;
+background-color: #000000;
+background-size: cover;
+color: #fff;
+padding: 10px 20px;
+}
+
+.daohang{
+position: absolute;
+z-index: 0;
+display:block;
+font-weight:normal;
+font-size:40px;
+color:#FFFFFF;
+font-family: "楷体";
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+.daohang:hover{
+color: crimson;
+}
