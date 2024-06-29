@@ -42,16 +42,16 @@ body {
 }
 
 .section1 {
-    background-image: url('/blackmonkey/img/blackmyth_wukong_01.jpg');
+    background-image: url('../img/blackmyth_wukong_01.jpg');
     
 }
 
 .section2 {
-    background-image: url('/blackmonkey/img/Concept_heifenshan3.jpg');
+    background-image: url('../img/Concept_heifenshan3.jpg');
 }
 
 .section3 {
-    background-image: url('/blackmonkey/img/blackmyth_wukong_03.jpg');
+    background-image: url('../img/blackmyth_wukong_03.jpg');
 }
 
 .tooltiptext {
@@ -92,7 +92,7 @@ body {
 	text-align:center;
 	padding:4px;
 	text-decoration:none;
-    background-image: url('/blackmonkey/img/10010.png'); 
+    background-image: url('../img/10010.png'); 
     background-size: cover;
     z-index: 2;
 }
