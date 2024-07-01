@@ -8,7 +8,7 @@ body, html {
 }
 /* 第一部分内容 */
 .contentSection1{
-  margin: 0px 120px 0px 120px;
+  margin: 0px 100px 0px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body, html {
 }
 /* 第二部分内容 */
 .contentSection2{
-  margin: 0px 120px 0px 120px;
+  margin: 0px 100px 0px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,9 +77,9 @@ line-height: 1.6;
     z-index: 1; /* 按钮栏在最上层 */
 }
 .sidebar button:nth-child(1) {
-width: 40px;
-height: 40px;
-margin-bottom: 50px;
+width: 90px;
+height: 90px;
+margin-bottom: 60px;
 background-image: url('../img/up.png'); /* 第一个按钮的背景图片路径 */
 background-size: cover;
 background-repeat: no-repeat;
@@ -92,9 +92,9 @@ background-color: transparent;
 }
 
 .sidebar button:nth-child(2) {
-width: 40px;
-height: 40px;
-margin-top: 50px;
+width: 90px;
+height: 90px;
+margin-top: 60px;
 
 background-image: url('../img/down.png'); /* 第二个按钮的背景图片路径 */
 background-size: cover;
@@ -129,30 +129,31 @@ box-sizing: border-box;
 
 
 header {
-position: fixed;
-top:0%;
-left: 0%;
-right: 0%;
-height: 80px;
-z-index: 1;
-background-color: #000000;
-background-size: cover;
-color: #fff;
-padding: 10px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	z-index: 1;
+	background-color: #000000;
+	background-size: cover;
+	color: #fff;
+	padding: 10px 20px;
 }
 
-.daohang{
-position: absolute;
-z-index: 0;
-display:block;
-font-weight:normal;
-font-size:40px;
-color:#FFFFFF;
-font-family: "楷体";
-text-align:center;
-padding:4px;
-text-decoration:none;
+.daohang {
+	position: absolute;
+	z-index: 0;
+	display: block;
+	font-weight: normal;
+	font-size: 30px;
+	color: #FFFFFF;
+	font-family: "楷体";
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
 }
-.daohang:hover{
-color: crimson;
+
+.daohang:hover {	
+	color: crimson;
 }

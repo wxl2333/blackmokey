@@ -20,30 +20,9 @@ body {
     background-attachment: fixed;
     
 }
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1;
-}
-.fullscreen-bg video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
 
 .section1 {
     background-image: url('../img/blackmyth_wukong_01.jpg');
-    
 }
 
 .section2 {
@@ -53,14 +32,18 @@ body {
 .section3 {
     background-image: url('../img/blackmyth_wukong_03.jpg');
 }
+.section4 {
+    background-image: url('../img/blackmyth_wukong_04.jpg');
+}
+
 
 .tooltiptext {
 	 visibility: hidden; 
     position: absolute;
     bottom: 20px;
-    left: -35%;
+    left: -50%;
 	top:-200%;
-	width: 500px;
+	width: 600px;
 	height: 100px;
 	text-align:center;
 	font-size:33px;
@@ -69,7 +52,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	opacity: 0;
 	transition: opacity 1s;
-    z-index: 2;
   
 	
 }
@@ -94,10 +76,30 @@ body {
 	text-decoration:none;
     background-image: url('../img/10010.png'); 
     background-size: cover;
-    z-index: 2;
 }
-/* a:hover,a:active
+a:hover,a:active
 {
 	font-size:60px;
 	
-} */
+}
+.floating-image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.floating-image img {
+    width: 150px; 
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+.floating-image p {
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "楷体";
+}

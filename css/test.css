@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background:url('../img/blackmyth_wukong_01.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.question-box {
+
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    background: url("../img/qsbox.png");
+    background-size: cover;
+    opacity: 0.8;
+    font-family: "楷体";
+    font-size: larger;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    margin: 15px 0;
+    padding: 12px;
+    border: 2px solid #c5c4c4;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 60px;
+z-index: 1;
+background-color: #000000;
+background-size: cover;
+color: #fff;
+padding: 10px 20px;
+}
+
+.daohang {
+position: absolute;
+z-index: 0;
+display: block;
+font-weight: normal;
+font-size: 30px;
+color: #FFFFFF;
+font-family: "楷体";
+text-align: center;
+padding: 4px;
+text-decoration: none;
+}
+
+.daohang:hover {	
+color: crimson;
+}
