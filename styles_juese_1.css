@@ -1,0 +1,127 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	z-index: 1;
+	background-color: #000000;
+	background-size: cover;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.daohang {
+	position: absolute;
+	z-index: 0;
+	display: block;
+	font-weight: normal;
+	font-size: 40px;
+	color: #FFFFFF;
+	font-family: "楷体";
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+}
+
+.daohang:hover {
+	color: crimson;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	transition: background-image 0.5s ease-in-out;
+	background-image: url('./img/img_bg_introduce_3.jpg');
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+.sidebar {
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar button {
+	margin: 50px;
+	padding: 10px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-family: "楷体";
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background: none;
+	position: relative;
+	left: 20%;
+}
+
+.sidebar button:hover {
+	background: none;
+}
+
+.sidebar button img {
+	margin-right: 10px;
+	position: absolute;
+	transition: opacity 0.3s ease;
+	left: -20%;
+}
+
+.sidebar button .default-img {
+	opacity: 1;
+	z-index: 1;
+}
+
+.sidebar button .hover-img {
+	opacity: 0;
+	z-index: 2;
+}
+
+.sidebar button:hover .hover-img {
+	opacity: 1;
+}
+
+.sidebar button .clicked-img {
+	opacity: 0;
+	z-index: 3;
+}
+
+.sidebar button.clicked .clicked-img {
+	opacity: 1;
+}
+
+.sidebar button.clicked .hover-img, .sidebar button.clicked .default-img {
+	opacity: 1;
+}
+
+.main-content {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text-content {
+	width: 25%;
+	padding: 20px;
+	font-family: "楷体";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text-content p {
+	font-size: 18px;
+	color: #ff0000;
+}
