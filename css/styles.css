@@ -84,8 +84,8 @@ a:hover,a:active
 }
 .floating-image {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;   
+    right: 50px;
     z-index: 1000;
 }
 .floating-image img {
@@ -93,6 +93,7 @@ a:hover,a:active
     height: auto;
     border-radius: 10px;
     display: block;
+    animation: blinkAnimation 4s infinite; 
 }
 .floating-image p {
     color: white;
@@ -102,4 +103,22 @@ a:hover,a:active
     border-radius: 5px;
     font-size: 18px;
     font-family: "楷体";
+}
+@keyframes blinkAnimation {
+    0% {
+        opacity: 0;
+        width: 150px;
+    }
+    20% {
+        opacity: 1;
+        width: 250px;
+    }
+    80% {
+        opacity: 1;
+
+    }
+    100% {
+        opacity: 0;
+        width: 150px;
+    }
 }
