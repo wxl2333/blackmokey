@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=icon href="./img/favicon.ico">
+    <title>场景设计</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+			background: url('./img/Concept_heifenshan3.jpg') no-repeat center center fixed;
+			background-size: cover;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            z-index: 1;
+            background-color: #000000;
+            background-size: cover;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        
+        .daohang {
+            position: absolute;
+            z-index: 0;
+            display: block;
+            font-weight: normal;
+            font-size: 30px;
+            color: #FFFFFF;
+            font-family: "楷体";
+            text-align: center;
+            padding: 4px;
+            text-decoration: none;
+        }
+        
+        .daohang:hover {
+            color: crimson;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: rgba(67, 67, 67, 0.3); /* Semi-transparent background for sidebar */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1; /* Ensure sidebar is above the overlay */
+            position: relative; /* Needed for z-index to work */
+			margin-top: 70px; 
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white; 
+            margin-bottom: 10px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+         .image-box {
+            display: none; /* Initially hide all image boxes */
+            position: relative;
+            width: 85%;
+            height: 75%;
+            background-color: #ddd;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensure images don't overflow */
+        }
+         
+        .image-box.active {
+            display: block; /* Show only the active image box */
+        }
+        
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire space */
+            display: block; /* Remove extra space */
+            position: absolute; /* Position images within their container */
+            top: 0;
+            left: 0;
+        }
+        
+        .text-box {
+            width: 55%;
+            height: 75px;
+            background-color: rgba(81, 81, 81, 0.3);
+            padding: 10px;
+            text-align: left;
+            overflow-y: auto;
+			color: white;
+			border-radius: 10px; 
+        }
+        
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1; /* Ensure buttons are above images */
+        }
+        
+        .nav-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+	<header>
+	        <a class="daohang" href="index2.html" target="_self" style="left:5%">首页</a>
+	        <a class="daohang" href="juese.html" target="_self" style="left: 35%;">角色设计</a>
+	        <a class="daohang" href="" target="_self" style="left: 45%; color: crimson;">建筑设计</a>
+            <a class="daohang" href="background.html" target="_self" style="left: 25%;">背景介绍</a>
+	        <a class="daohang" href="czxy.html" target="_self" style="left: 55%;">重走西游</a>
+	    </header>
+    <div class="sidebar">
+        <a href="#" class="back-button">返回</a>
+        <a href="#item1">牌楼</a>
+        <a href="#item2">经幢</a>
+        <a href="#item3">石牌坊</a>
+		<a href="#item4">抱鼓石</a>
+		<a href="#item5">石塔</a>
+		<a href="#item6">山门</a>
+		<a href="#item7">观音禅院</a>
+    </div>
+    <div class="content">
+        <div id="item1" class="image-box">
+            <div class="nav-buttons">
+                <button onclick="prevImage('item1')">＜</button>
+                <button onclick="nextImage('item1')">＞</button>
+            </div>
+			<img src="./img/牌楼1.PNG" alt="牌楼1">
+			<img src="./img/牌楼截图.png" alt="牌楼截图">
+        </div>
+        <div id="item2" class="image-box">
+            <div class="nav-buttons">
+                <button onclick="prevImage('item2')">＜</button>
+                <button onclick="nextImage('item2')">＞</button>
+            </div>
+            <img src="./img/经幢1.PNG" alt="经幢1">
+            <img src="./img/经幢截图.png" alt="经幢截图">
+        </div>
+        <div id="item3" class="image-box">
+            <div class="nav-buttons">
+                <button onclick="prevImage('item3')">＜</button>
+                <button onclick="nextImage('item3')">＞</button>
+            </div>
+            <img src="./img/石牌坊2.PNG" alt="石牌坊2">
+			<img src="./img/石牌坊截图.png" alt="石牌坊截图">
+        </div>
+		<div id="item4" class="image-box">
+		    <div class="nav-buttons">
+		        <button onclick="prevImage('item4')">＜</button>
+		        <button onclick="nextImage('item4')">＞</button>
+		    </div>
+		    <img src="./img/抱鼓石2.PNG" alt="抱鼓石2">
+			<img src="./img/抱鼓石截图.png" alt="抱鼓石截图">
+		</div>
+		<div id="item5" class="image-box">
+		    <div class="nav-buttons">
+		        <button onclick="prevImage('item5')">＜</button>
+		        <button onclick="nextImage('item5')">＞</button>
+		    </div>
+		    <img src="./img/石塔1.png" alt="石塔1">
+		    <img src="./img/石塔截图.png" alt="石塔截图">
+		</div>
+		<div id="item6" class="image-box">
+		    <div class="nav-buttons">
+		        <button onclick="prevImage('item6')">＜</button>
+		        <button onclick="nextImage('item6')">＞</button>
+		    </div>
+		    <img src="./img/山门2.PNG" alt="山门2">
+		    <img src="./img/山门截图.png" alt="山门截图">
+		</div>
+		<div id="item7" class="image-box">
+		    <div class="nav-buttons">
+		        <button onclick="prevImage('item7')">＜</button>
+		        <button onclick="nextImage('item7')">＞</button>
+		    </div>
+		    <img src="./img/六胜塔.png" alt="六胜塔">
+			<img src="./img/火烧观音禅院截图.png" alt="火烧观音禅院截图">
+		</div>
+        <div class="text-box" id="text-box">
+            选择项目查看简介
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                let itemId = this.getAttribute('href').substring(1);
+                let imageBoxes = document.querySelectorAll('.image-box');
+                let textBox = document.getElementById('text-box');
+
+                // Hide all image boxes
+                imageBoxes.forEach(box => {
+                    box.style.display = 'none';
+                });
+
+                // Show corresponding image box
+                document.getElementById(itemId).style.display = 'block';
+
+                // Update text box content
+                switch (itemId) {
+                    case 'item1':
+                        textBox.textContent = '与牌坊类似，来源于春秋时代的衡门，早期有纪念成就达成的功能，后被作为入口元素构建，也有如日本鸟居的演变。游戏内牌楼上的彩绘为中唐敦煌壁画159窟文殊变与普贤变同款，典型的佛教壁画，突出此处的宗教性质。';
+                        break;
+                    case 'item2':
+                        textBox.textContent = '一种具有纪念意义的宗教建筑元素，最早建于公元7世纪后半期的中原地区，盛行于唐宋时期，以后转衰，但到明清时期仍有雕造，一般分为幢座、幢身、幢顶三部分，置于大道寺院等地。游戏内经幢造型比较像山西五台山佛光寺东大殿的唐乾符经幢。';
+                        break;
+                    case 'item3':
+                        textBox.textContent = '整体结构由两根柱子、一个开间和一个屋檐组成，两门柱上有明显的松树雕刻纹样，取自原著中黑风山黑松林的描述。这类石牌坊十分稀有，仅有元代的庙沟后和宋朝的横省石牌坊';
+                        break;
+                    case 'item4':
+                        textBox.textContent = '抱鼓一样的石头，也叫石鼓，在我国传统民居的大门口非常常见，属于门枕石的一种，结构上能起到稳定大门的作用，成语“门当户对”中的门当原指的就是大宅门前的一对抱鼓石，因为鼓声宏阔威严，厉如雷霆，被老百姓认为能够辟邪所以民间广泛用石鼓来当“门当”。游戏中黑风山的一对抱鼓石比大户人家狮子林的还要大了几圈，造型更加张扬，暗示禅院的不正常。';
+                        break;
+                    case 'item5':
+                        textBox.textContent = '类似金陵栖霞寺舍利塔，该塔位于江苏省南京市栖霞区栖霞山麓的栖霞寺东，是中国五代时期的佛教石塔，其整体结构紧凑，雕饰华美，塔八角五檐，高15米，是研究南唐建筑的重要实物，中国佛塔艺术的精品之作，也是南方少见的密檐式塔。';
+                        break;
+                    case 'item6':
+                        textBox.textContent = '中间叫做空门，左边为无相门，右边为无作门，一般人进入寺院应该走两侧门，中间的空门是出家人走，即“遁入空门”之意。';
+                        break;
+                    case 'item7':
+                        textBox.textContent = '原型为泉州六圣塔，又称为万寿塔，是一个比较典型的元代建筑物，塔为花岗石仿木结构楼阁式建筑，八角五级，每级由塔心外壁回廊组成，有券顶门、方龛各四个，全塔雕覆金刚力士像80尊塔盖八角翘脊，各雕做佛一尊，中石叠小塔状，上置金刚宝箧式塔刹。';
+                        break;
+                    default:
+                        textBox.textContent = '选择项目查看简介';
+                }
+            });
+        });
+
+        // Handle back button click
+        document.querySelector('.back-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.history.back(); // Go back to the previous page
+            });
+		 // Function to show previous image
+		        function prevImage(itemId) {
+		            let currentBox = document.getElementById(itemId);
+		            let images = currentBox.querySelectorAll('img');
+		            let lastImage = images[images.length - 1];
+		            currentBox.insertBefore(lastImage, images[0]);
+		        }
+		
+		        // Function to show next image
+		        function nextImage(itemId) {
+		            let currentBox = document.getElementById(itemId);
+		            let images = currentBox.querySelectorAll('img');
+		            let firstImage = images[0];
+		            currentBox.appendChild(firstImage);
+		        }
+    </script>
+</body>
+</html>
