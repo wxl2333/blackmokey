@@ -105,3 +105,8 @@ header {
 .daohang:hover {
     color: crimson;
 }
+.feedback {
+    margin-top: 15px;
+    font-size: larger;
+    color: #ff0000;
+}
