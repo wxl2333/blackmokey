@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑神话：悟空 剧情介绍</title>
+	<link rel=icon href="./img/favicon.ico">
+    <link rel="stylesheet" href="czxy.css">
+</head>
+<body>
+	<header>
+		<a class="daohang" href="#" target="_self" style="left:5%">首页</a>
+		<a class="daohang" href="#" target="_self" style="left: 50%;">背景介绍</a>
+		<a class="daohang" href="#" target="_self" style="left: 65%; color: crimson;">文化考据</a>
+		<a class="daohang" href="#" target="_self" style="left: 80%;">重走西游</a>
+	</header>
+    <div id="container">
+        <div id="character"></div>
+        <div class="button" style="left: 0px; top: 350px;" onclick="showText(this, 0)">火照黑云</div>
+        <div class="button" style="left: 150px; top: 0px;" onclick="showText(this, 1)">风起黄昏</div>
+        <div class="button" style="left: 300px; top: 350px;" onclick="showText(this, 2)">夜生白露</div>
+        <div class="button" style="left: 450px; top: 0px;" onclick="showText(this, 3)">曲度紫鸳</div>
+		<div class="button" style="left: 700px; top: 350px;" onclick="showText(this, 4)">日落红尘</div>
+		<div class="button" style="left: 850px; top: 0px;" onclick="showText(this, 5)">未竟</div>
+		
+        <div id="popup" class="hidden">
+            <p id="popup-text""></p>
+            <button onclick="hideText()">关闭</button>
+        </div>
+    </div>
+    <script src="czxy.js"></script>
+</body>
+</html>
