@@ -63,6 +63,10 @@
             color: white; 
             margin-bottom: 10px;
         }
+		.sidebar a.active {
+		    background-color: rgba(100, 100, 100, 0.5); /* 选中项的背景色 */
+		    transform: scale(1); /* 不缩小，保持原样 */
+		}
 
         .content {
             flex: 1;
@@ -129,14 +133,14 @@
 </head>
 <body>
 	<header>
-	        <a class="daohang" href="index2.html" target="_self" style="left:5%">首页</a>
-		<a class="daohang" href="background.html" target="_self" style="left: 30%;">背景介绍</a>
-	        <a class="daohang" href="" target="_self" style="left: 40%; color: crimson;">建筑设计</a>
-            	<a class="daohang" href="juese.html" target="_self" style="left: 50%;">角色设计</a>
-	        <a class="daohang" href="czxy.html" target="_self" style="left: 60%;">重走西游</a>
+	        <a class="daohang" href="#" target="_self" style="left:5%">首页</a>
+			<a class="daohang" href="#" target="_self" style="left: 30%;">背景介绍</a>
+			<a class="daohang" href="#" target="_self" style="left: 40%; color: crimson;">建筑设计</a>
+	        <a class="daohang" href="#" target="_self" style="left: 50%;">角色设计</a>
+	        <a class="daohang" href="#" target="_self" style="left: 60%;">重走西游</a>
 	    </header>
     <div class="sidebar">
-        <a href="#" class="back-button">返回</a>
+        
         <a href="#item1">牌楼</a>
         <a href="#item2">经幢</a>
         <a href="#item3">石牌坊</a>
@@ -244,11 +248,15 @@
                         textBox.textContent = '中间叫做空门，左边为无相门，右边为无作门，一般人进入寺院应该走两侧门，中间的空门是出家人走，即“遁入空门”之意。';
                         break;
                     case 'item7':
-                        textBox.textContent = '原型为泉州六圣塔，又称为万寿塔，是一个比较典型的元代建筑物，塔为花岗石仿木结构楼阁式建筑，八角五级，每级由塔心外壁回廊组成，有券顶门、方龛各四个，全塔雕覆金刚力士像80尊塔盖八角翘脊，各雕做佛一尊，中石叠小塔状，上置金刚宝箧式塔刹。';
+                        textBox.textContent = '原型为泉州六胜塔，又称为万寿塔，是一个比较典型的元代建筑物，塔为花岗石仿木结构楼阁式建筑，八角五级，每级由塔心外壁回廊组成，有券顶门、方龛各四个，全塔雕覆金刚力士像80尊塔盖八角翘脊，各雕做佛一尊，中石叠小塔状，上置金刚宝箧式塔刹。';
                         break;
                     default:
                         textBox.textContent = '选择项目查看简介';
                 }
+				document.querySelectorAll('.sidebar a').forEach(link => {
+				            link.classList.remove('active'); // 移除所有链接的 active 类
+				});
+				this.classList.add('active'); // 将当前链接添加 active 类
             });
         });
 
