@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('img/blackmyth_wukong_screenshot_019.jpg');
+    background-image: url('img/backgroundMain.png');
 	background-size: cover;
     transition: background-image 1s; 
 }
